@@ -1,1 +1,1 @@
-Simple responsive navbar (bootstrapm, javascript)
+Simple responsive navbar (bootstrap, javascript)
