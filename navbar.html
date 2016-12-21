@@ -10,9 +10,10 @@
 			border-bottom:1px solid;
 		}
 		.navbar-brand{
-			font-size:200%
+			font-size:200%;
+			text-decoration:none;
 		}
-		a{
+		.navbar > li > a {
 			text-decoration:none;
 		}
 		.navbar{
@@ -22,19 +23,31 @@
 		}
 		
 		@media screen and (min-width: 600px) {
+			.navbar-right{
+				position:fixed;
+				left:0;
+				height: 100%;
+				width:150px;
+				border-right:1px solid;
+			}
 			.navbar-top div{
 				display:inline-block;
 			}
-			.navbar li{
+			.navbar-top > div >.navbar li{
 				display: inline;
 			}
-			#hamburger{
+			#toggle-collapse{
 				display:none;
 			}
 		}
 		
 		@media screen and (max-width: 599px) {
-			#hamburger{
+			.navbar-right{
+				left:0;
+				width:100%;
+				border-bottom:1px solid;
+			}
+			#toggle-collapse{
 				float:right;
 			}
 			.collapse{
@@ -51,10 +64,10 @@
 	</style>
 </head>
 <body>
-<nav class="navbar-top">
+<nav class="navbar-right"> <!-- options navbar-top : navbar-right -->
     <div>
         <a class="navbar-brand" href="#">Title</a>
-		<button type="button" id="hamburger" onclick="toggleCollapse()">&#9776</button>
+		<button type="button" id="toggle-collapse" onclick="toggleCollapse()">&#9776</button>
     </div>
     <div class="collapse" id="collapse">
         <ul class="navbar">
